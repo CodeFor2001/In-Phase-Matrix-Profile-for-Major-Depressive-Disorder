@@ -1,0 +1,69 @@
+# Project configuration for MODMA-based pMP/HFD replication
+
+data_root: ./data
+
+dataset:
+  id: ds004217
+  name: MODMA
+  source: openneuro
+  task: rest
+  eyes: closed
+
+sampling:
+  orig_fs: 1000
+  target_fs: 200
+
+filter:
+  hp: 2.0
+  lp: 47.0
+  design: firpm
+
+epoching:
+  total_minutes: 6
+  epoch_len_s: 20.48
+  n_epochs_keep: 10
+
+pmp:
+  m: 200
+  local_min_dist: 3
+
+hfd:
+  kmax: 8
+
+montage:
+  use_subset_10_20: true
+  channels_10_20:
+    - Fp1
+    - Fp2
+    - F7
+    - F3
+    - Fz
+    - F4
+    - F8
+    - T7
+    - C3
+    - Cz
+    - C4
+    - T8
+    - P7
+    - P3
+    - Pz
+    - P4
+    - P8
+    - O1
+    - O2
+    - FC1
+    - FC2
+    - CP1
+    - CP2
+    - PO3
+    - PO4
+    - FT7
+    - FT8
+    - TP7
+    - TP8
+    - Oz
+
+storage:
+  backup_hook_enabled: false
+  backup_command: idrive_e2_sync.sh
