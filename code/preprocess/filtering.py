@@ -3,6 +3,10 @@
 filtering.py - Band-pass filter (2–47 Hz) + resample to target_fs
 Implements zero-phase FIR filtering for EEG.
 """
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
 
 import numpy as np
 from scipy.signal import firwin, filtfilt, resample_poly
