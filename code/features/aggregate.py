@@ -16,6 +16,8 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 import sys
+
+# make project root importable (utils/, features/)
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from utils.paths import load_settings, get_path
@@ -23,11 +25,6 @@ from utils.repro import log_run
 from features.pmp import pmp_epoch
 from features.hfd import hfd_epoch
 
-
-np.savez("data/interim/sub-TEST_epochs.npz",
-         epochs=np.random.randn(10, 4, 4096),
-         channels=["Fz","Cz","Pz","Oz"],
-         subject="TEST")
 
 def aggregate_subject(npz_path, fs, m, local_min_dist, kmax):
     """
