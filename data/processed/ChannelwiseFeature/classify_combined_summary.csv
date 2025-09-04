@@ -1,0 +1,4 @@
+feature,best_channel,best_accuracy_loo
+pMP,60,0.6170212765957447
+HFD,35,0.5531914893617021
+pmp+hfd,57,0.6595744680851063

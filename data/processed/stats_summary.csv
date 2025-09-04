@@ -1,0 +1,3 @@
+feature,channels_tested,significant_p<0.05,significant_pBonf<0.05,significant_frontier,best_channel_by_AUC,best_AUC
+pMP,128,0,0,0,50,0.6467391304347826
+HFD,128,0,0,0,21,0.6268115942028986

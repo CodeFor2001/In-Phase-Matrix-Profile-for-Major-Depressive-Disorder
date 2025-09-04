@@ -1,0 +1,2 @@
+classifier,accuracy,balanced_accuracy,roc_auc,n_samples
+SVM,0.46190476190476193,0.4271826852531181,0.4281456346294938,210
